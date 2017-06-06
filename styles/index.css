@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'UniversBlack';
+  src: url("../fonts/UniversLTStd-Black.otf"); }
+@font-face {
+  font-family: 'UniversLight';
+  src: url("../fonts/UniversLTStd-Light.otf"); }
 html, body {
   user-select: none;
   -ms-user-select: none;
@@ -11,6 +17,7 @@ html, body {
   color: white; }
 
 .header {
+  display: none;
   position: absolute;
   top: 0;
   width: 100%;
@@ -22,12 +29,14 @@ html, body {
 
 #map {
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  position: relative;
-  width: 300px;
-  height: 300px;
-  top: 150px; }
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; }
 
 /*# sourceMappingURL=index.css.map */

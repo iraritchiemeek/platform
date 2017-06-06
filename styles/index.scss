@@ -2,6 +2,15 @@ $grey1: #A1A1A1;
 $grey2: #222222;
 $grey3: #222222;
 
+@font-face {
+    font-family: 'UniversBlack';
+   	src:  url('../fonts/UniversLTStd-Black.otf');
+}
+
+@font-face {
+    font-family: 'UniversLight';
+   	src:  url('../fonts/UniversLTStd-Light.otf');
+}
 
 @mixin center {
 	position: absolute;
@@ -39,6 +48,7 @@ html, body {
 }
 
 .header {
+	display: none;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -50,9 +60,10 @@ html, body {
 }
 
 #map {
-	@include center-horizontal;
-	position: relative;
-	width: 300px;
-	height: 300px;
-	top: 150px;
+	@include center;
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
 }
