@@ -12,7 +12,18 @@
 	<script src="js/angular.js"></script>
 </head>
 <body ng-controller="mainController">
-	<div class="title"><h1>Platform</h1></div>
-	<div class="header"></div>
+	<div class="title" ng-click="showMap()">
+		<h1>PLATFORM</h1>
+		<span>(1)</span>
+		<div class="title__underline"></div>
+	</div>
+	<div class="info">
+		<span>A Temporary Experience by:</span>
+		<br>
+		<br>
+		<span>Cyrus Chow</span>
+		<br>
+		<span>Molawin Evangelista</span>
+	</div>
 	<div id="map"></div>
 </body>

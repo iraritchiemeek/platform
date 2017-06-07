@@ -234,9 +234,19 @@ function initMap () {
 	});
 }
 
+$(document).mousemove(function (event) {
+	var mouseX = event.pageX
+	var mouseY = event.pageY
+	var elem = $('.title')
+	var distance = Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+	// $('.title').css({'color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')'})
+	$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance /10 + '%'})
+})
+
 
 platformApp.controller('mainController', function($scope, $location, $sce) {
 	$scope.index = 0;
+	// $scope.showMap = false;
 
 	$scope.decrementIndex = function(array) {
 	    if ($scope.index <= 0) {
@@ -244,6 +254,11 @@ platformApp.controller('mainController', function($scope, $location, $sce) {
 	    } else {
 	        $scope.index -= 1
 	    }
+	}
+
+	$scope.showMap = function () {
+		$('#map').css({'top': '50%'})
+		$('.title').hide()
 	}
 
 	$scope.incrementIndex = function(array) {
@@ -260,5 +275,7 @@ platformApp.controller('mainController', function($scope, $location, $sce) {
 	          zoom: 8
 	        });
 	      }
+
+
 
 })
