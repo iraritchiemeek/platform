@@ -26,7 +26,6 @@ $small-breakpoint: em(1024) !default;
 }
 
 @mixin center {
-	position: absolute;
 	top: 50%;
 	left:50%;
 	-webkit-transform: translate(-50%, -50%);
@@ -34,14 +33,12 @@ $small-breakpoint: em(1024) !default;
 }
 
 @mixin center-vertical {
-	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 }
 
 @mixin center-horizontal {
-	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
@@ -61,14 +58,21 @@ html, body {
 }
 
 #map {
-	@include center;
-	position: absolute;
-	top: -100%;
-	width: 500px;
-	height: 500px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	@include center-horizontal;
+	position: relative;
+	top: 0;
 	border-radius: 10px;
-	transition-duration: 0.5s;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	width: 95%;
+	height: 350px;
+	@include respond-to(non-mobile) {
+		@include center;
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		top: -100%;
+		transition-duration: 0.5s;
+	}
 }
 
 .title {
