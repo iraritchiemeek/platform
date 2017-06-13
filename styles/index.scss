@@ -120,19 +120,27 @@ html, body {
 }
 
 .info {
-	font-family: 'UniversLight';
-	bottom: 0;
-	width: 100%;
-	position: absolute;
-	font-size: 1.2em;
-	height: 50px;
-	span:nth-child(1) {
-		min-width: 240px;
+	display: none;
+	@include respond-to(non-mobile) {
+		display: inline;
+		font-family: 'UniversLight';
+		bottom: 0;
+		width: 100%;
+		position: absolute;
+		font-size: 1.2em;
+		height: 50px;
+		span:nth-child(1) {
+			min-width: 240px;
+		}
+		span {
+			float: left;
+			width: 25%;
+			text-align: center;
+			min-width: 180px;
+		}
 	}
-	span {
-		float: left;
-		width: 25%;
-		text-align: center;
-		min-width: 180px;
-	}
+}
+
+.contact {
+	text-align: center;
 }

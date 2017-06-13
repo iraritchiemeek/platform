@@ -78,18 +78,25 @@ html, body {
         color: black; } }
 
 .info {
-  font-family: 'UniversLight';
-  bottom: 0;
-  width: 100%;
-  position: absolute;
-  font-size: 1.2em;
-  height: 50px; }
-  .info span:nth-child(1) {
-    min-width: 240px; }
-  .info span {
-    float: left;
-    width: 25%;
-    text-align: center;
-    min-width: 180px; }
+  display: none; }
+  @media only screen and (min-width: 64em) {
+    .info {
+      display: inline;
+      font-family: 'UniversLight';
+      bottom: 0;
+      width: 100%;
+      position: absolute;
+      font-size: 1.2em;
+      height: 50px; }
+      .info span:nth-child(1) {
+        min-width: 240px; }
+      .info span {
+        float: left;
+        width: 25%;
+        text-align: center;
+        min-width: 180px; } }
+
+.contact {
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
