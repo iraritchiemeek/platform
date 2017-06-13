@@ -2,6 +2,19 @@ $grey1: #A1A1A1;
 $grey2: #222222;
 $grey3: #222222;
 
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$small-breakpoint: em(1024) !default;
+
+@mixin respond-to($media) {
+  @if $media == non-mobile {
+    @media only screen and (min-width: $small-breakpoint) { @content; }
+  }
+}
+
 @font-face {
     font-family: 'UniversBlack';
    	src:  url('../fonts/UniversLTStd-Black.otf');
@@ -59,37 +72,63 @@ html, body {
 }
 
 .title {
-	@include center;
-	position: absolute;
-	font-family: 'UniversBlack';
-	letter-spacing: 5px;
-	cursor: pointer;
-	h1 {	
-		display: inline-block;
-		font-size: 4em;
-		margin: 0 0 0 0;
+	top: 0;
+	margin: 20px 0 0 0;
+	text-align: center;
+	&__underline {
+		display: none;
 	}
 	span {
 		position: relative;
-		top: -50px;
-		font-size: 2em;
+		top: -40px;
+		font-size: 1em;
 	}
-	&__underline {
-		height: 10px;
-		width: 0;
-		background-color: white;
-		position: relative;
-		top: 100%;
+	h1 {
+		display: inline-block;
+		font-size: 3em;
+		margin: 0 0 0 0;
 	}
-	&:hover {
-		color: black;
+	@include respond-to(non-mobile) {
+		@include center;
+		position: absolute;
+		font-family: 'UniversBlack';
+		letter-spacing: 5px;
+		cursor: pointer;
+		h1 {	
+			font-size: 3.5em;
+		}
+		span {
+			font-size: 1.5em;
+		}
+		&__underline {
+			display: inline-block;
+			float: left;
+			height: 10px;
+			width: 0;
+			background-color: white;
+			position: relative;
+			top: 100%;
+		}
+		&:hover {
+			color: black;
+		}
 	}
 }
 
 .info {
 	font-family: 'UniversLight';
 	bottom: 0;
+	width: 100%;
 	position: absolute;
-	margin: 0 0 20px 20px;
 	font-size: 1.2em;
+	height: 50px;
+	span:nth-child(1) {
+		min-width: 240px;
+	}
+	span {
+		float: left;
+		width: 25%;
+		text-align: center;
+		min-width: 180px;
+	}
 }

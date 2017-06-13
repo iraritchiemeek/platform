@@ -31,37 +31,58 @@ html, body {
   transition-duration: 0.5s; }
 
 .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  font-family: 'UniversBlack';
-  letter-spacing: 5px;
-  cursor: pointer; }
-  .title h1 {
-    display: inline-block;
-    font-size: 4em;
-    margin: 0 0 0 0; }
+  top: 0;
+  margin: 20px 0 0 0;
+  text-align: center; }
+  .title__underline {
+    display: none; }
   .title span {
     position: relative;
-    top: -50px;
-    font-size: 2em; }
-  .title__underline {
-    height: 10px;
-    width: 0;
-    background-color: white;
-    position: relative;
-    top: 100%; }
-  .title:hover {
-    color: black; }
+    top: -40px;
+    font-size: 1em; }
+  .title h1 {
+    display: inline-block;
+    font-size: 3em;
+    margin: 0 0 0 0; }
+  @media only screen and (min-width: 64em) {
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      font-family: 'UniversBlack';
+      letter-spacing: 5px;
+      cursor: pointer; }
+      .title h1 {
+        font-size: 3.5em; }
+      .title span {
+        font-size: 1.5em; }
+      .title__underline {
+        display: inline-block;
+        float: left;
+        height: 10px;
+        width: 0;
+        background-color: white;
+        position: relative;
+        top: 100%; }
+      .title:hover {
+        color: black; } }
 
 .info {
   font-family: 'UniversLight';
   bottom: 0;
+  width: 100%;
   position: absolute;
-  margin: 0 0 20px 20px;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  height: 50px; }
+  .info span:nth-child(1) {
+    min-width: 240px; }
+  .info span {
+    float: left;
+    width: 25%;
+    text-align: center;
+    min-width: 180px; }
 
 /*# sourceMappingURL=index.css.map */

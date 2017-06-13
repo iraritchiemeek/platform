@@ -240,7 +240,7 @@ $(document).mousemove(function (event) {
 	var elem = $('.title')
 	var distance = Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
 	// $('.title').css({'color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')'})
-	$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance /10 + '%'})
+	$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance / 10 + '%'})
 })
 
 
