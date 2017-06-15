@@ -57,6 +57,10 @@ html, body {
 	color: white;
 }
 
+a, a:visited {
+	color: white;
+}
+
 #map {
 	@include center-horizontal;
 	position: relative;
@@ -119,28 +123,42 @@ html, body {
 	}
 }
 
-.info {
+.site-credit {
+	right: 0%;
+	margin: 0 10px 0 0;
+	position: absolute;
+}
+
+.store-credit {
+	@include center-horizontal;
+	position: absolute;
+
+}
+
+.nav {
+	position: absolute;
+	bottom: 10px;
+	&__button {
+		float: left;
+		margin: 0 7px 0 7px;
+		height: 25px;
+	}
+}
+
+.info-text {
 	display: none;
 	@include respond-to(non-mobile) {
+		display: inline-block;
+		bottom: 10px;	
 		display: inline;
 		font-family: 'UniversLight';
-		bottom: 0;
-		width: 100%;
-		position: absolute;
 		font-size: 1.2em;
-		height: 50px;
-		span:nth-child(1) {
-			min-width: 240px;
-		}
-		span {
-			float: left;
-			width: 25%;
-			text-align: center;
-			min-width: 180px;
-		}
 	}
 }
 
 .contact {
 	text-align: center;
+	@include respond-to(non-mobile) {
+		display: none;
+	}
 }

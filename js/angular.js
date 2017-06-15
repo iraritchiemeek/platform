@@ -243,10 +243,27 @@ $(document).mousemove(function (event) {
 	$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance / 10 + '%'})
 })
 
+platformApp.config(function ($routeProvider) {
+	$routeProvider
+	.when('/', {
+		templateUrl : '../home.html'
+	})
+	.when('/brands', {
+		templateUrl : '../brands.html'
+	})
+	.when('/about' , {
+		templateUrl : '../about.html'
+	})
+	.when('/contact' , {
+		templateUrl : '../contact.html'
+	})
+	.otherwise({
+	    redirectTo: '/'
+	});
+})
 
-platformApp.controller('mainController', function($scope, $location, $sce) {
+platformApp.controller('mainController', function($scope) {
 	$scope.index = 0;
-	// $scope.showMap = false;
 
 	$scope.decrementIndex = function(array) {
 	    if ($scope.index <= 0) {

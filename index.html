@@ -12,33 +12,6 @@
 	<script src="js/angular.js"></script>
 </head>
 <body ng-controller="mainController">
-	<div class="title" ng-click="showMap()">
-		<h1>PLATFORM</h1>
-		<span>(1)</span>
-		<div class="title__underline"></div>
-	</div>
-	<div class="info">
-		<span>A Temporary Experience by:</span>
-		<span>Cyrus Chow</span>
-		<span>Molawin Evangelista</span>
-		<span>Site by Ira</span>
-	</div>
+	<div ng-view></div>
 	<div id="map"></div>
-	<div class="contact">
-		<span>Come visit us:</span>
-		<br>
-		<span>Shop 14</span>
-		<br>
-		<span>Victoria Park Village<span>
-		<br>
-		<span>210 Victoria St West</span>
-		<br>
-		<span>Auckland 1010</span>
-		<br>
-		<span>New Zealand</span>
-		<br>
-		<span>E: info@platformstore.co.nz</span>
-		<br>
-		<span>P: +64221293553</span>
-	</div>
 </body>
