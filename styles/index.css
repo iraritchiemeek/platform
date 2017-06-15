@@ -104,6 +104,17 @@ a, a:visited {
     float: left;
     margin: 0 7px 0 7px;
     height: 25px; }
+    .nav__button--selected {
+      font-family: 'UniversBlack' !important; }
+  .nav--vertical {
+    top: calc(50% - 150px);
+    left: 25px;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */ }
 
 .info-text {
   display: none; }
