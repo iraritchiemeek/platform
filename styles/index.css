@@ -107,7 +107,7 @@ a, a:visited {
     .nav__button--selected {
       font-family: 'UniversBlack' !important; }
   .nav--vertical {
-    top: calc(50% - 150px);
+    top: calc(50% - 115px);
     left: 25px;
     transform: rotate(90deg);
     transform-origin: left top;
@@ -189,5 +189,30 @@ a, a:visited {
       font-size: 0.9em;
       top: -7px;
       right: -15px; }
+
+.brands {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+  left: 30%;
+  display: inline-block; }
+  .brands span {
+    font-size: 1.3em; }
+
+.brands-images {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+  height: 50%;
+  width: 45%;
+  right: 100px;
+  max-height: 400px;
+  max-width: 775px; }
+  .brands-images__image {
+    width: 33.333%;
+    height: 50%;
+    float: left; }
 
 /*# sourceMappingURL=index.css.map */
