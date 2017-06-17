@@ -22,7 +22,8 @@ html, body {
   color: white; }
 
 a, a:visited {
-  color: white; }
+  color: white;
+  text-decoration: none; }
 
 #map {
   left: 50%;
@@ -94,7 +95,8 @@ a, a:visited {
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
-  position: absolute; }
+  position: absolute;
+  cursor: pointer; }
 
 .nav {
   position: absolute;
@@ -199,6 +201,8 @@ a, a:visited {
   display: inline-block;
   cursor: pointer; }
   .brands span {
+    transition-duration: 1s;
+    color: white;
     font-size: 1.3em; }
 
 .brands-images {
@@ -212,6 +216,7 @@ a, a:visited {
   max-height: 400px;
   max-width: 775px; }
   .brands-images__image {
+    transition-duration: 1s;
     width: 30%;
     height: 47%;
     float: left;

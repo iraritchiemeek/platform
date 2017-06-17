@@ -271,7 +271,9 @@ platformApp.controller('mainController', function($scope) {
 		$('.title').hide()
 	}
 
-	$scope.highlightCircle = function(n) {
+	$scope.highlightCircle = function(n, $event) {
+		$('.brands-images__image, .brands span').removeAttr("style")
+		$($event.target).css({'margin-left': '-15px', 'color': '#555555'})
 		$('.brands-images__image:nth-child(' + n + ')').css({'background-image': 'url("../imgs/greyCircle' + n + '.png")'})
 	}
 

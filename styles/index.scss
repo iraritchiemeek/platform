@@ -66,6 +66,7 @@ html, body {
 
 a, a:visited {
 	color: white;
+	text-decoration: none;
 }
 
 #map {
@@ -139,6 +140,7 @@ a, a:visited {
 .store-credit {
 	@include center-horizontal;
 	position: absolute;
+	cursor: pointer;
 
 }
 
@@ -248,6 +250,8 @@ a, a:visited {
 	display: inline-block;
 	cursor: pointer;
 	span {
+		transition-duration: 1s;
+		color: white;
 		font-size: 1.3em;
 	}
 }
@@ -261,6 +265,7 @@ a, a:visited {
 	max-height: 400px;
 	max-width: 775px;
 	&__image {
+		transition-duration: 1s;
 		width: 30%;
 		height: 47%;
 		float: left;
