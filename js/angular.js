@@ -267,7 +267,7 @@ platformApp.config(function ($routeProvider) {
 platformApp.controller('mainController', function($scope) {
 
 	$scope.showMap = function () {
-		$('#map').css({'top': '50%'})
+		$('#map').css({'top': '50%', 'opacity': '1'})
 		$('.title').hide()
 	}
 
@@ -278,7 +278,11 @@ platformApp.controller('mainController', function($scope) {
 	}
 
 	$scope.contactMap = function(bool) {
-		$('#map').css({'top': '50%', 'left': '30%'})
+		if(bool) {
+			$('#map').css({'top': '50%', 'left': '30%', 'opacity': '1'})
+		} else {
+			$('#map').css({'top': '-50%', 'left': '50%', 'opacity': '0'})
+		}
 	}
 
 })

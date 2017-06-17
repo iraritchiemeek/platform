@@ -71,6 +71,7 @@ a, a:visited {
 
 #map {
 	@include center-horizontal;
+	z-index: 0;
 	position: relative;
 	top: 0;
 	border-radius: 10px;
@@ -80,8 +81,8 @@ a, a:visited {
 	@include respond-to(non-mobile) {
 		@include center;
 		position: absolute;
-		width: 500px;
-		height: 500px;
+		width: 450px;
+		height: 450px;
 		top: -100%;
 		transition-duration: 0.5s;
 	}
@@ -182,6 +183,7 @@ a, a:visited {
 
 .contact {
 	@include center-vertical;
+	z-index: 1;
 	right: 28%;
 	position: absolute;
 	font-size: 1.3em;

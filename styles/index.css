@@ -29,6 +29,7 @@ a, a:visited {
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
+  z-index: 0;
   position: relative;
   top: 0;
   border-radius: 10px;
@@ -42,8 +43,8 @@ a, a:visited {
       -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       position: absolute;
-      width: 500px;
-      height: 500px;
+      width: 450px;
+      height: 450px;
       top: -100%;
       transition-duration: 0.5s; } }
 
@@ -134,6 +135,7 @@ a, a:visited {
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+  z-index: 1;
   right: 28%;
   position: absolute;
   font-size: 1.3em;
