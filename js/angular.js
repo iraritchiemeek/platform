@@ -248,16 +248,16 @@ function initMap () {
 platformApp.config(function ($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl : '../home.html'
+		templateUrl : 'home.html'
 	})
 	.when('/brands', {
-		templateUrl : '../brands.html'
+		templateUrl : 'brands.html'
 	})
 	.when('/about' , {
-		templateUrl : '../about.html'
+		templateUrl : 'about.html'
 	})
 	.when('/contact' , {
-		templateUrl : '../contact.html'
+		templateUrl : 'contact.html'
 	})
 	.otherwise({
 	    redirectTo: '/'
