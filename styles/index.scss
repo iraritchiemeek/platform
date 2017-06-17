@@ -177,7 +177,9 @@ a, a:visited {
 		font-size: 1.2em;
 	}
 	&--about {
-		color: black;
+		span {
+			color: black;
+		}
 	}
 }
 

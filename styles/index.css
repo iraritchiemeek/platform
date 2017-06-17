@@ -128,7 +128,7 @@ a, a:visited {
       display: inline;
       font-family: 'UniversLight';
       font-size: 1.2em; } }
-  .info-text--about {
+  .info-text--about span {
     color: black; }
 
 .contact {
