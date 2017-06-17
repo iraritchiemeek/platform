@@ -211,8 +211,26 @@ a, a:visited {
   max-height: 400px;
   max-width: 775px; }
   .brands-images__image {
-    width: 33.333%;
-    height: 50%;
-    float: left; }
+    width: 30%;
+    height: 47%;
+    float: left;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 1.5% 0 1.5% 0; }
+    .brands-images__image:nth-child(2), .brands-images__image:nth-child(5) {
+      margin: 1.5% 1.6665% 1.5% 1.6665%; }
+    .brands-images__image:nth-child(1) {
+      background-image: url("../imgs/circle1.png"); }
+    .brands-images__image:nth-child(2) {
+      background-image: url("../imgs/circle2.png"); }
+    .brands-images__image:nth-child(3) {
+      background-image: url("../imgs/circle3.png"); }
+    .brands-images__image:nth-child(4) {
+      background-image: url("../imgs/circle4.png"); }
+    .brands-images__image:nth-child(5) {
+      background-image: url("../imgs/circle5.png"); }
+    .brands-images__image:nth-child(6) {
+      background-image: url("../imgs/circle6.png"); }
 
 /*# sourceMappingURL=index.css.map */

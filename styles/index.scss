@@ -260,8 +260,20 @@ a, a:visited {
 	max-height: 400px;
 	max-width: 775px;
 	&__image {
-		width: 33.333%;
-		height: 50%;
+		width: 30%;
+		height: 47%;
 		float: left;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: 1.5% 0 1.5% 0;
+		&:nth-child(2), &:nth-child(5) {
+			margin: 1.5% 1.6665% 1.5% 1.6665%;
+		}
+	@for $i from 1 through 6 {
+		&:nth-child(#{$i}) {
+			background-image: url('../imgs/circle#{$i}.png');
+		}
+	}
 	}
 }
