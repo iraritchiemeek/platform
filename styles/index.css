@@ -31,12 +31,12 @@ a, a:visited {
   -webkit-transform: translateX(-50%);
   z-index: 0;
   position: relative;
-  top: 0 !important;
+  top: 0;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   width: 95%;
   height: 350px;
-  opacity: 1 !important; }
+  opacity: 1; }
   @media only screen and (min-width: 64em) {
     #map {
       top: 50%;
@@ -216,7 +216,8 @@ a, a:visited {
   position: absolute;
   left: 30%;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1; }
   .brands span {
     transition-duration: 1s;
     color: white;
