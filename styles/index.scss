@@ -181,9 +181,16 @@ a, a:visited {
 }
 
 .contact {
-	text-align: center;
-	@include respond-to(non-mobile) {
-		display: none;
+	@include center-vertical;
+	right: 28%;
+	position: absolute;
+	font-size: 1.3em;
+	display: inline-block;
+	&--home {	
+		text-align: center;
+		@include respond-to(non-mobile) {
+			display: none;
+		}
 	}
 }
 
@@ -282,4 +289,12 @@ a, a:visited {
 		}
 	}
 	}
+}
+
+.enjoy {
+	@include center-vertical;
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+	font-size: 1.2em;
 }

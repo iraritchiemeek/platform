@@ -131,10 +131,18 @@ a, a:visited {
     color: black; }
 
 .contact {
-  text-align: center; }
-  @media only screen and (min-width: 64em) {
-    .contact {
-      display: none; } }
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  right: 28%;
+  position: absolute;
+  font-size: 1.3em;
+  display: inline-block; }
+  .contact--home {
+    text-align: center; }
+    @media only screen and (min-width: 64em) {
+      .contact--home {
+        display: none; } }
 
 .about-bg {
   width: 100%;
@@ -238,5 +246,14 @@ a, a:visited {
       background-image: url("../imgs/circle5.png"); }
     .brands-images__image:nth-child(6) {
       background-image: url("../imgs/circle6.png"); }
+
+.enjoy {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  font-size: 1.2em; }
 
 /*# sourceMappingURL=index.css.map */

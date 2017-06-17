@@ -277,4 +277,8 @@ platformApp.controller('mainController', function($scope) {
 		$('.brands-images__image:nth-child(' + n + ')').css({'background-image': 'url("../imgs/greyCircle' + n + '.png")'})
 	}
 
+	$scope.contactMap = function(bool) {
+		$('#map').css({'top': '50%', 'left': '30%'})
+	}
+
 })
