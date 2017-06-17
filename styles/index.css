@@ -35,8 +35,10 @@ a, a:visited {
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   width: 95%;
-  height: 350px;
-  opacity: 1; }
+  height: 350px; }
+  @media only screen and (max-width: 64em) {
+    #map {
+      opacity: 1 !important; } }
   @media only screen and (min-width: 64em) {
     #map {
       top: 50%;
