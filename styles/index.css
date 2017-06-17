@@ -31,11 +31,12 @@ a, a:visited {
   -webkit-transform: translateX(-50%);
   z-index: 0;
   position: relative;
-  top: 0;
+  top: 0 !important;
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   width: 95%;
-  height: 350px; }
+  height: 350px;
+  opacity: 1 !important; }
   @media only screen and (min-width: 64em) {
     #map {
       top: 50%;
@@ -141,7 +142,13 @@ a, a:visited {
   font-size: 1.3em;
   display: inline-block; }
   .contact--home {
-    text-align: center; }
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin: 0 0 20px 0; }
     @media only screen and (min-width: 64em) {
       .contact--home {
         display: none; } }

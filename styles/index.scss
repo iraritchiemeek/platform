@@ -73,11 +73,12 @@ a, a:visited {
 	@include center-horizontal;
 	z-index: 0;
 	position: relative;
-	top: 0;
+	top: 0 !important;
 	border-radius: 10px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 	width: 95%;
 	height: 350px;
+	opacity: 1 !important;
 	@include respond-to(non-mobile) {
 		@include center;
 		position: absolute;
@@ -190,8 +191,12 @@ a, a:visited {
 	position: absolute;
 	font-size: 1.3em;
 	display: inline-block;
-	&--home {	
+	&--home {
+		@include center-horizontal;
+		width: 100%;
 		text-align: center;
+		position: relative;
+		margin: 0 0 20px 0;
 		@include respond-to(non-mobile) {
 			display: none;
 		}
