@@ -196,7 +196,8 @@ a, a:visited {
   -webkit-transform: translateY(-50%);
   position: absolute;
   left: 30%;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   .brands span {
     font-size: 1.3em; }
 

@@ -234,14 +234,16 @@ function initMap () {
 	});
 }
 
-$(document).mousemove(function (event) {
-	var mouseX = event.pageX
-	var mouseY = event.pageY
-	var elem = $('.title')
-	var distance = Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
-	// $('.title').css({'color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')'})
-	$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance / 10 + '%'})
-})
+// if ($('.title__underline').length > 0) {
+	$(document).mousemove(function (event) {
+		var mouseX = event.pageX
+		var mouseY = event.pageY
+		var elem = $('.title')
+		var distance = Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
+		// $('.title').css({'color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')'})
+		$('.title__underline').css({'background-color': 'rgb(' + distance % 256 + ',' + distance % 256 + ',' + distance % 256 + ')','width': 100 - distance / 10 + '%'})
+	})
+// }
 
 platformApp.config(function ($routeProvider) {
 	$routeProvider
@@ -263,36 +265,14 @@ platformApp.config(function ($routeProvider) {
 })
 
 platformApp.controller('mainController', function($scope) {
-	$scope.index = 0;
-
-	$scope.decrementIndex = function(array) {
-	    if ($scope.index <= 0) {
-	        $scope.index = array.length -1
-	    } else {
-	        $scope.index -= 1
-	    }
-	}
 
 	$scope.showMap = function () {
 		$('#map').css({'top': '50%'})
 		$('.title').hide()
 	}
 
-	$scope.incrementIndex = function(array) {
-	    if ($scope.index >= array.length -1) {
-	        $scope.index = 0
-	    } else {
-	        $scope.index += 1
-	    }
+	$scope.highlightCircle = function(n) {
+		$('.brands-images__image:nth-child(' + n + ')').css({'background-image': 'url("../imgs/greyCircle' + n + '.png")'})
 	}
-
-	$scope.initMap = function () {
-	        map = new google.maps.Map(document.getElementById('map'), {
-	          center: {lat: -34.397, lng: 150.644},
-	          zoom: 8
-	        });
-	      }
-
-
 
 })
